@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GridMAker from "./components/GridMaker/GridMaker"
+import GridMaker from "./components/GridMaker/GridMaker"
 import './App.css';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (  
       <div className="App">
         <h1>Pixel Art Maker</h1>
-        <GridMAker/>
+        <GridMaker/>
       </div>
     );
   }
