@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./GridMaker.css";
-
+// -----------------------------------------------------*
 class GridMaker extends Component {
   state = {
     showGrid: false,
@@ -13,11 +13,6 @@ class GridMaker extends Component {
   };
   //-----------------Event Handlers (end)-------------*
   render() {
-    // let grid = null;
-    // if(this.state.showGrid){
-    //   // Show grid
-    //   grid = <div>Grid is here</div>
-    // }
     return (
       <div className="main">
         <button type="reset" onClick={this.props.resetGrid} id="resetButton">
@@ -33,15 +28,8 @@ class GridMaker extends Component {
           <button onClick={this.props.incrementCol}>+</button>
           <span>{this.props.setColBadge}</span>
         </div>
-        {/* <div className="create-clear">
-          <CreateGrid toggleShowGrid={this.toggleShowGridHandler} />
-          <ClearGrid />
-        </div> */}
-        {/* We need "dynamic CSS" here */}
-        {/* <div class="grid"></div> */}
       </div>
     );
   }
 }
-
 export default GridMaker;
