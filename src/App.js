@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import GridMaker from "./components/GridMaker/GridMaker";
 import Grid from "./components/Grid/Grid";
-
 import "./App.css";
-
+// -----------------------------------------------------*
 class App extends Component {
   state = {
     Row: 0,
     Col: 0,
+    showGrid: false,
   };
-  
   //-----------------Event Handlers (start)-------------*
   // -----Row------*
   incrementRowHandler = () => {
@@ -35,7 +34,6 @@ class App extends Component {
   };
   decrementColHandler = () => {
     let newCol = this.state.Col;
-
     if (newCol === 0) {
       this.setState({ Col: newCol });
     } else if (newCol > 0) {
@@ -48,19 +46,17 @@ class App extends Component {
     this.setState({ Row: 0 });
     this.setState({ Col: 0 });
   };
-  gridMakerHandler = () => {
+  showGridHandler = () => {
     // Dynamic Grid using dynamic CSS in react
-    console.log("Grid has been created!")
-  }
+    // console.log("Grid has been created!");
+    let doesShow = this.state.showGrid;
+    this.setState({ showGrid: !doesShow });
+  };
   //-----------------Event Handlers (end)-------------*
   render() {
-    const styles = {
-      display:"grid",
-      gridTemplateColumns: "repeat(4, 70px)",
-      gridTemplateRows: "repeat(2, 40px)",
-      backgroundColor: "green",
-      margin: "auto",
-    };
+    if (this.state.showGrid) {
+     return <Grid columns={this.state.Col} rows={this.state.Row} />;
+    }
     return (
       <div className="App">
         <h1>Pixel Art Maker</h1>
@@ -74,9 +70,8 @@ class App extends Component {
           resetGrid={this.resetGridHandler}
         />
         <div className="create-clear">
-          <button onClick={this.gridMakerHandler}>Create</button>
+          <button onClick={this.showGridHandler}>Create</button>
           <button>Clear</button>
-          <Grid/>
         </div>
       </div>
     );
