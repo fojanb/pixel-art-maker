@@ -46,7 +46,7 @@ class App extends Component {
     this.setState({ Row: 0 });
     this.setState({ Col: 0 });
   };
-  
+
   //-----------------Event Handlers (end)-------------*
   render() {
     return (
@@ -61,6 +61,10 @@ class App extends Component {
           decrementCol={this.decrementColHandler}
           resetGrid={this.resetGridHandler}
         />
+        <div>
+          <button>Create</button>
+          <button>Clear</button>
+        </div>
       </div>
     );
   }
