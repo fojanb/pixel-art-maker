@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import CreateGrid from "../CreateGrid/CreateGrid";
-import ClearGrid from "../ClearGrid/ClearGrid";
 import "./GridMaker.css";
 
 class GridMaker extends Component {
@@ -11,7 +9,7 @@ class GridMaker extends Component {
   // Toggle
   toggleShowGridHandler = () => {
     const doesShow = this.state.showGrid;
-    this.setState({ showGrid: !doesShow }); 
+    this.setState({ showGrid: !doesShow });
   };
   //-----------------Event Handlers (end)-------------*
 
@@ -38,12 +36,12 @@ class GridMaker extends Component {
           <button onClick={this.props.incrementCol}>+</button>
           <span>{this.props.setColBadge}</span>
         </div>
-        <div className="create-clear">
+        {/* <div className="create-clear">
           <CreateGrid toggleShowGrid={this.toggleShowGridHandler} />
           <ClearGrid />
-        </div>
+        </div> */}
         {/* We need "dynamic CSS" here */}
-        <div class="grid"></div>
+        {/* <div class="grid"></div> */}
       </div>
     );
   }
