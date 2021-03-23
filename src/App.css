@@ -1,4 +1,30 @@
 .App {
   text-align: center;
 }
-
+.create-clear {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(2, 70px);
+  grid-template-rows: repeat(1, 40px);
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+.create-clear > button {
+  border:none;
+  background-color: #ffc6ff;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border:2.5px solid #fdffb6;
+  font-family: "Potta One", cursive;
+  color: #723db6;
+  box-shadow: 2px 2px #a0c4ff;
+}
+.create-clear > button:hover {
+  cursor: pointer;
+  background-color: #ffd9ff;
+}
