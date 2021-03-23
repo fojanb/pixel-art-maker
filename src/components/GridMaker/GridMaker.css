@@ -6,6 +6,10 @@
   padding: 20px;
   background-color: blanchedalmond;
 }
+.main button:hover {
+  cursor: pointer;
+  background-color: rgb(197, 207, 106);
+}
 .row-column {
   display: flex;
   flex-wrap: wrap;
