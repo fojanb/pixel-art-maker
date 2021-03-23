@@ -10,7 +10,7 @@ class App extends Component {
     showGrid: false,
   };
   //-----------------Event Handlers (start)-------------*
-  // -----Row------*
+  // -----Add Row------*
   incrementRowHandler = () => {
     let newRow = this.state.Row;
     newRow++;
@@ -26,7 +26,7 @@ class App extends Component {
     }
     this.setState({ Row: newRow });
   };
-  // -----Column------*
+  // -----Add Column------*
   incrementColHandler = () => {
     let newCol = this.state.Col;
     newCol++;
@@ -54,8 +54,13 @@ class App extends Component {
   };
   //-----------------Event Handlers (end)-------------*
   render() {
+    let grid = null;
     if (this.state.showGrid) {
-     return <Grid columns={this.state.Col} rows={this.state.Row} />;
+      grid = (
+        <div>
+          <Grid columns={this.state.Col} rows={this.state.Row} />
+        </div>
+      );
     }
     return (
       <div className="App">
@@ -73,6 +78,7 @@ class App extends Component {
           <button onClick={this.showGridHandler}>Create</button>
           <button>Clear</button>
         </div>
+        {grid}
       </div>
     );
   }
