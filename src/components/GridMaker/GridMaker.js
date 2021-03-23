@@ -12,14 +12,14 @@ class GridMaker extends Component {
         <div className="row-column">
           <h3>Row</h3>
           <button>-</button>
-          <button>+</button>
-          <span class="w3-badge w3-green">0</span>
+          <button onClick={this.props.incrementRow}>+</button>
+          <span>{this.props.setIncBadge}</span>
         </div>
         <div className="row-column">
           <h3>Column</h3>
           <button>-</button>
           <button>+</button>
-          <span class="w3-badge w3-green">0</span>
+          <span>0</span>
         </div>
         <div className="create-clear">
           <CreateGrid />
