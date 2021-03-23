@@ -8,7 +8,7 @@ class App extends Component {
     Col: 0,
   };
   //-----------------Event Handlers (start)-------------*
-   // -----Row------*
+  // -----Row------*
   incrementRowHandler = () => {
     let newRow = this.state.Row;
     newRow++;
@@ -17,7 +17,7 @@ class App extends Component {
   decrementRowHandler = () => {
     let newRow = this.state.Row;
 
-    if (newRow == 0) {
+    if (newRow === 0) {
       this.setState({ Row: newRow });
     } else if (newRow > 0) {
       newRow = newRow - 1;
@@ -25,7 +25,7 @@ class App extends Component {
     this.setState({ Row: newRow });
   };
 
-   // -----Column------*
+  // -----Column------*
   incrementColHandler = () => {
     let newCol = this.state.Col;
     newCol++;
@@ -34,14 +34,19 @@ class App extends Component {
   decrementColHandler = () => {
     let newCol = this.state.Col;
 
-    if (newCol == 0) {
+    if (newCol === 0) {
       this.setState({ Col: newCol });
     } else if (newCol > 0) {
       newCol = newCol - 1;
     }
     this.setState({ Col: newCol });
   };
-
+  // Reset Button
+  resetGridHandler = () => {
+    this.setState({ Row: 0 });
+    this.setState({ Col: 0 });
+  };
+  
   //-----------------Event Handlers (end)-------------*
   render() {
     return (
@@ -54,6 +59,7 @@ class App extends Component {
           incrementCol={this.incrementColHandler}
           setColBadge={this.state.Col}
           decrementCol={this.decrementColHandler}
+          resetGrid={this.resetGridHandler}
         />
       </div>
     );
