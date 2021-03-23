@@ -4,11 +4,28 @@ import ClearGrid from "../ClearGrid/ClearGrid";
 import "./GridMaker.css";
 
 class GridMaker extends Component {
-  state = {};
+  state = {
+    showGrid: false,
+  };
+  //-----------------Event Handlers (start)-------------*
+  // Toggle
+  toggleShowGridHandler = () => {
+    const doesShow = this.state.showGrid;
+    this.setState({ showGrid: !doesShow }); 
+  };
+  //-----------------Event Handlers (end)-------------*
+
   render() {
+    // let grid = null;
+    // if(this.state.showGrid){
+    //   // Show grid
+    //   grid = <div>Grid is here</div>
+    // }
     return (
       <div className="main">
-        <button type="reset">Reset</button>
+        <button type="reset" onClick={this.props.resetGrid}>
+          Reset
+        </button>
         <div className="row-column">
           <h3>Row</h3>
           <button onClick={this.props.decrementRow}>-</button>
@@ -22,13 +39,11 @@ class GridMaker extends Component {
           <span>{this.props.setColBadge}</span>
         </div>
         <div className="create-clear">
-          <CreateGrid />
+          <CreateGrid toggleShowGrid={this.toggleShowGridHandler} />
           <ClearGrid />
         </div>
         {/* We need "dynamic CSS" here */}
-        <div class="grid">
-
-        </div>
+        <div class="grid"></div>
       </div>
     );
   }
