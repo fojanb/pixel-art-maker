@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import RowAndColumn from "./components/RowAndColumn/RowAndColumn";
 import GridMaker from "./components/GridMaker/GridMaker";
-import Grid from "./components/Grid/Grid";
+import Cell from "./components/Cell/Cell"
 import "./App.css";
 // -----------------------------------------------------*
 class App extends Component {
@@ -59,14 +60,16 @@ class App extends Component {
     if (this.state.showGrid) {
       grid = (
         <div>
-          <Grid columns={this.state.Col} rows={this.state.Row} />
+          <GridMaker columns={this.state.Col} rows={this.state.Row}>
+              <Cell/>
+          </GridMaker>
         </div>
       );
     }
     return (
       <div className="App">
         <h1>Pixel Art Maker</h1>
-        <GridMaker
+        <RowAndColumn
           incrementRow={this.incrementRowHandler}
           setRowBadge={this.state.Row}
           decrementRow={this.decrementRowHandler}
