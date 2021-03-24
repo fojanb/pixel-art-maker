@@ -1,11 +1,12 @@
 body {
   margin: 0;
+  padding-bottom:100px ;
   font-family: "Potta One", cursive;
-  background-color: #dee2ff;
+  background-color: #e5e8ff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* color: #605764; */
-  color: #723db6;
+  color: #846ffc;
   letter-spacing: 2px;
 }
 
