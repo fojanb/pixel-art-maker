@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RowAndColumn from "./components/RowAndColumn/RowAndColumn";
 import GridMaker from "./components/GridMaker/GridMaker";
-import Cell from "./components/Cell/Cell"
+import Cell from "./components/Cell/Cell";
 import "./App.css";
 // -----------------------------------------------------*
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     Col: 0,
     showGrid: false,
   };
-  
+
   //-----------------Event Handlers (start)-------------*
   // -----Add Row------*
   incrementRowHandler = () => {
@@ -57,11 +57,15 @@ class App extends Component {
   //-----------------Event Handlers (end)-------------*
   render() {
     let grid = null;
+    let cells = [];
     if (this.state.showGrid) {
+      for (let i = 0; i < this.state.Row * this.state.Col; i++) {
+        cells.push(<Cell />);
+      }
       grid = (
         <div>
           <GridMaker columns={this.state.Col} rows={this.state.Row}>
-              <Cell/>
+            {cells}
           </GridMaker>
         </div>
       );
