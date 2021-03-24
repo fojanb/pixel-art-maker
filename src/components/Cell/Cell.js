@@ -13,6 +13,7 @@ const StyledDiv = styled.div`
 class Cell extends Component {
   state = {};
   draw = () => {
+      console.log("clicked")
 
   }
 
