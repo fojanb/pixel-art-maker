@@ -1,35 +1,34 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
 import "./GridMaker.css";
 // -----------------------------------------------------*
+// Grid container
+const StyledGridContainer = styled.div`
+  // regular CSS goes here :
+  // *Dynamic Grid*
+  display: grid;
+  grid-template-columns: repeat(${(props) => props.numberOfColumns}, 20px);
+  grid-template-rows: repeat(${(props) => props.numberOfRows}, 20px);
+  margin: 0 auto;
+  justify-content: center;
+  align-item: center;
+  margin-top: 20px;
+`;
+
 class GridMaker extends Component {
-  state = {
-    showGrid: false,
-  };
-  //-----------------Event Handlers (start)-------------*
-  // Toggle
-  toggleShowGridHandler = () => {
-    const doesShow = this.state.showGrid;
-    this.setState({ showGrid: !doesShow });
-  };
-  //-----------------Event Handlers (end)-------------*
+  state = {};
+
   render() {
     return (
-      <div className="main">
-        <button type="reset" onClick={this.props.resetGrid} id="resetButton">
-          Reset
-        </button>
-        <div className="row-column">
-          <h4>Row</h4>
-          <button onClick={this.props.decrementRow}>-</button>
-          <button onClick={this.props.incrementRow}>+</button>
-          <span>{this.props.setRowBadge}</span>
-          <h4>Column</h4>
-          <button onClick={this.props.decrementCol}>-</button>
-          <button onClick={this.props.incrementCol}>+</button>
-          <span>{this.props.setColBadge}</span>
-        </div>
-      </div>
+      <StyledGridContainer
+        numberOfColumns={this.props.columns}
+        numberOfRows={this.props.rows}
+      >
+        {this.props.children}
+      </StyledGridContainer>
     );
   }
 }
+
 export default GridMaker;
