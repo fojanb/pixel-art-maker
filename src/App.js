@@ -65,7 +65,7 @@ class App extends Component {
       grid = (
         <div>
           <GridMaker columns={this.state.Col} rows={this.state.Row}>
-            {cells}
+            {cells} //We need 'props.children' here
           </GridMaker>
         </div>
       );
