@@ -9,6 +9,7 @@ class App extends Component {
     Col: 0,
     showGrid: false,
   };
+  
   //-----------------Event Handlers (start)-------------*
   // -----Add Row------*
   incrementRowHandler = () => {
