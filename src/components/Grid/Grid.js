@@ -17,7 +17,7 @@ const StyledGridContainer = styled.div`
 // Grid's cell
 const StyledGridCells = styled.div`
   display: flex;
-  border: 1px solid black;
+  border: 1px solid #06d6a0;
   background-color: #caffbf;
   &:hover {
     background-color: #06d6a0;
@@ -28,7 +28,7 @@ class Grid extends Component {
   state = {};
 
   gridCellMaker = () => {
-    for (let i = 0; i < this.props.numberOfColumns; i++) {
+    for (let i = 0; i < this.props.numberOfColumns*this.props.numberOfRows; i++) {
         //   Create grid's cell
         let gridCell = document.createElement("div");
         document.querySelector("gridContainer").appendChild(gridCell);
