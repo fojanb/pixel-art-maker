@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
 import "./GridMaker.css";
 // -----------------------------------------------------*
 // Grid container
 const StyledGridContainer = styled.div`
   // regular CSS goes here :
-  // *Dynamic Grid*
+  // *Dynamic grid via dynamic 'styled-component'*
   display: grid;
   grid-template-columns: repeat(${(props) => props.numberOfColumns}, 20px);
   grid-template-rows: repeat(${(props) => props.numberOfRows}, 20px);
@@ -15,7 +14,6 @@ const StyledGridContainer = styled.div`
   align-item: center;
   margin-top: 20px;
 `;
-
 class GridMaker extends Component {
   state = {};
 
