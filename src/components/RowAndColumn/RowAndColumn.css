@@ -28,7 +28,7 @@
   border-radius: 5px;
   border: 2.5px solid #fdffb6;
   font-family: "Potta One", cursive;
-  color: #723db6;
+  color: #846ffc;
   box-shadow: 2px 2px #a0c4ff;
 }
 .row-column > button:hover {
@@ -42,15 +42,15 @@
   border-radius: 5px;
   border: 2.5px solid #fdffb6;
   font-family: "Potta One", cursive;
-  color: #723db6;
+  color: #846ffc;
   box-shadow: 2px 2px #a0c4ff;
 }
 #resetButton:hover {
   cursor: pointer;
   background-color: #ffd9ff;
 }
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: repeat(8, 70px);
   grid-template-rows: repeat(8, 70px);
-}
+} */
