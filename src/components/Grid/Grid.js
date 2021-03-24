@@ -27,14 +27,6 @@ const StyledGridCells = styled.div`
 class Grid extends Component {
   state = {};
 
-  gridCellMaker = () => {
-    for (let i = 0; i < this.props.numberOfColumns*this.props.numberOfRows; i++) {
-        //   Create grid's cell
-        let gridCell = document.createElement("div");
-        document.querySelector("gridContainer").appendChild(gridCell);
-      }
-    
-  };
   render() {
     return (
       <StyledGridContainer
