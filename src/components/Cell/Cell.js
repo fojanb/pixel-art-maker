@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
+// Grid's cell
+
+const StyledDiv = styled.div`
+  display: flex;
+  border: 1px solid #06d6a0;
+  background-color: #caffbf;
+  &:hover {
+    background-color: #06d6a0;
+  }
+`;
 
 class Cell extends Component {
   state = {};
-  // Grid's cell
-  styles = {
-    display: "flex",
-    border: "1px solid #06d6a0",
-    backgroundColor: " #caffbf",
-  };
+
   render() {
-    return <div style={this.styles}></div>;
+    return <StyledDiv></StyledDiv>;
   }
 }
 
