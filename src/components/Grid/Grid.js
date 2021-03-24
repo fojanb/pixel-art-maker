@@ -42,7 +42,7 @@ class Grid extends Component {
         numberOfColumns={this.props.columns}
         numberOfRows={this.props.rows}
       >
-        <StyledGridCells>{this.gridCellMaker()}</StyledGridCells>
+        <StyledGridCells></StyledGridCells>
       </StyledGridContainer>
     );
   }
