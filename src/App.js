@@ -54,6 +54,7 @@ class App extends Component {
     let doesShow = this.state.showGrid;
     this.setState({ showGrid: !doesShow });
   };
+  
   //-----------------Event Handlers (end)-------------*
   render() {
     let grid = null;
@@ -85,7 +86,7 @@ class App extends Component {
         />
         <div className="create-clear">
           <button onClick={this.showGridHandler}>Create</button>
-          <button>Clear</button>
+          <button onClick={this.resetGridHandler}>Clear</button>
         </div>
         {grid}
       </div>
