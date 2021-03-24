@@ -14,9 +14,12 @@ const StyledDiv = styled.div`
 
 class Cell extends Component {
   state = {};
+  draw = () => {
+      
+  }
 
   render() {
-    return <StyledDiv></StyledDiv>;
+    return <StyledDiv onClick={this.draw}></StyledDiv>;
   }
 }
 
