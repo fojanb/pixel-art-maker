@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import "./Grid.css";
 // -----------------------------------------------------*
-// *StyledDiv* is our grid container.
+// Grid container
 const StyledGridContainer = styled.div`
   // regular CSS goes here :
   // *Dynamic Grid*
@@ -14,21 +14,27 @@ const StyledGridContainer = styled.div`
   align-item: center;
   margin-top: 20px;
 `;
-
+// Grid's cell
+const StyledGridCells = styled.div`
+  display: flex;
+  border: 1px solid black;
+  background-color: #caffbf;
+  &:hover {
+    background-color: #06d6a0;
+  }
+`;
 
 class Grid extends Component {
   state = {};
 
   gridCellMaker = () => {
     for (let i = 0; i < this.props.numberOfColumns; i++) {
-      for (let j = 0; j < this.props.numberOfRows; j++) {
+        //   Create grid's cell
         let gridCell = document.createElement("div");
-        gridCell.classList.add('cellStyle');
         document.querySelector("gridContainer").appendChild(gridCell);
       }
-    }
+    
   };
-
   render() {
     return (
       <StyledGridContainer
@@ -36,7 +42,7 @@ class Grid extends Component {
         numberOfColumns={this.props.columns}
         numberOfRows={this.props.rows}
       >
-        {this.gridCellMaker()}
+        <StyledGridCells>{this.gridCellMaker()}</StyledGridCells>
       </StyledGridContainer>
     );
   }
