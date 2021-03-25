@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pixel-art-maker/static/css/main.246e7cd2.chunk.css",
+    "main.js": "/pixel-art-maker/static/js/main.6716219c.chunk.js",
+    "main.js.map": "/pixel-art-maker/static/js/main.6716219c.chunk.js.map",
+    "runtime-main.js": "/pixel-art-maker/static/js/runtime-main.b2ae74d7.js",
+    "runtime-main.js.map": "/pixel-art-maker/static/js/runtime-main.b2ae74d7.js.map",
+    "static/js/2.a3706c18.chunk.js": "/pixel-art-maker/static/js/2.a3706c18.chunk.js",
+    "static/js/2.a3706c18.chunk.js.map": "/pixel-art-maker/static/js/2.a3706c18.chunk.js.map",
+    "static/js/3.394d9505.chunk.js": "/pixel-art-maker/static/js/3.394d9505.chunk.js",
+    "static/js/3.394d9505.chunk.js.map": "/pixel-art-maker/static/js/3.394d9505.chunk.js.map",
+    "index.html": "/pixel-art-maker/index.html",
+    "static/css/main.246e7cd2.chunk.css.map": "/pixel-art-maker/static/css/main.246e7cd2.chunk.css.map",
+    "static/js/2.a3706c18.chunk.js.LICENSE.txt": "/pixel-art-maker/static/js/2.a3706c18.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2ae74d7.js",
+    "static/js/2.a3706c18.chunk.js",
+    "static/css/main.246e7cd2.chunk.css",
+    "static/js/main.6716219c.chunk.js"
+  ]
+}
