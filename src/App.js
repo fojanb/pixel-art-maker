@@ -54,7 +54,9 @@ class App extends Component {
     let doesShow = this.state.showGrid;
     this.setState({ showGrid: !doesShow });
   };
-
+  clearGrid = () =>{
+    this.cells = null;
+  }
   //-----------------Event Handlers (end)-------------*
   render() {
     let grid = null;
@@ -73,6 +75,7 @@ class App extends Component {
         </div>
       );
     }
+    
     return (
       <div className="App">
         <h1>Pixel Art Maker</h1>
@@ -87,7 +90,7 @@ class App extends Component {
         />
         <div className="create-clear">
           <button onClick={this.showGridHandler}>Create</button>
-          <button onClick={this.resetGridHandler}>Clear</button>
+          <button onClick={this.clearGrid}>Clear</button>
         </div>
         {grid}
       </div>
