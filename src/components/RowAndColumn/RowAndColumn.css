@@ -9,7 +9,8 @@
   background-color: #bde0fe;
   border-radius: 10px;
   border: 5px solid #fdffb6;
-  box-shadow: 5px 5px rgb(214, 214, 214);
+  box-shadow: 5px 5px #cbc7e2;
+  
 }
 .row-column {
   display: grid;
