@@ -80,7 +80,7 @@ class App extends Component {
 
     if (this.state.clearGrid) {
       for (let i = 0; i < this.state.Row * 10 * (this.state.Col * 10); i++) {
-        cells[i]= null;
+        cells[i] = null;
       }
       grid = (
         <div>
