@@ -15,7 +15,7 @@ class Cell extends Component {
   draw = () => {
       let cell = document.getElementById(this.props.id);
     //   console.log(cell);
-      cell.style.backgroundColor = "red";
+      cell.style.backgroundColor = "#06d6a0";
 
   }
 
