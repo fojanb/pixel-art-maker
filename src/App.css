@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.App > h1 {
+  color: #fdffb6;
+  -webkit-text-stroke: 1px #846ffc; 
+  
+}
 .create-clear {
   display: grid;
   grid-column-gap: 20px;
