@@ -13,12 +13,14 @@ const StyledDiv = styled.div`
 class Cell extends Component {
   state = {};
   draw = () => {
-      console.log("clicked")
+      let cell = document.getElementById(this.props.id);
+    //   console.log(cell);
+      cell.style.backgroundColor = "red";
 
   }
 
   render() {
-    return <StyledDiv onClick={this.draw}></StyledDiv>;
+    return <StyledDiv onClick={this.draw} id= {this.props.id}></StyledDiv>;
   }
 }
 
