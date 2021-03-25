@@ -57,6 +57,6 @@
 span{
   border: 3px solid #ffadad;
   border-radius: 5px;
-  width: 20px;
+  width:unset;
   background-color: #fdffb6;
 }
