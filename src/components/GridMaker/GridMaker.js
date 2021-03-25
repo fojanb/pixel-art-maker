@@ -16,8 +16,6 @@ const StyledGridContainer = styled.div`
   cursor: cell;
 `;
 class GridMaker extends Component {
-  state = {};
-
   render() {
     return (
       <StyledGridContainer
