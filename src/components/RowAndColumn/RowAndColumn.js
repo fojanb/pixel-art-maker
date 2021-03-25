@@ -19,11 +19,11 @@ class RowAndColumn extends Component {
           Reset
         </button>
         <div className="row-column">
-          <h4>Row</h4>
+          <h3>Row</h3>
           <button onClick={this.props.decrementRow}>-</button>
           <button onClick={this.props.incrementRow}>+</button>
           <span>{this.props.setRowBadge}</span>
-          <h4>Column</h4>
+          <h3>Column</h3>
           <button onClick={this.props.decrementCol}>-</button>
           <button onClick={this.props.incrementCol}>+</button>
           <span>{this.props.setColBadge}</span>
