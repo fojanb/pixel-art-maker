@@ -53,11 +53,7 @@
   cursor: pointer;
   background-color: #ffd9ff;
 }
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(8, 70px);
-  grid-template-rows: repeat(8, 70px);
-} */
+
 span{
   border: 3px solid #ffadad;
   border-radius: 5px;
