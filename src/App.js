@@ -9,6 +9,7 @@ class App extends Component {
     Row: 0,
     Col: 0,
     showGrid: false,
+    clearGrid: false,
   };
 
   //-----------------Event Handlers (start)-------------*
@@ -54,16 +55,17 @@ class App extends Component {
     let doesShow = this.state.showGrid;
     this.setState({ showGrid: !doesShow });
   };
-  clearGrid = () =>{
-    console.log("grid cleared");
-  }
+  clearGrid = () => {
+    let clear = this.state.clearGrid;
+    this.setState({ clearGrid: !clear });
+  };
   //-----------------Event Handlers (end)-------------*
   render() {
     let grid = null;
     let cells = [];
     if (this.state.showGrid) {
-      for (let i = 0; i < ((this.state.Row*10)*(this.state.Col*10)); i++) {
-        cells.push(<Cell id={i}/>);
+      for (let i = 0; i < this.state.Row * 10 * (this.state.Col * 10); i++) {
+        cells.push(<Cell id={i} />);
       }
       // console.log(cells);
       grid = (
@@ -75,8 +77,21 @@ class App extends Component {
         </div>
       );
     }
-   
-    
+
+    if (this.state.clearGrid) {
+      for (let i = 0; i < this.state.Row * 10 * (this.state.Col * 10); i++) {
+        cells[i]= null;
+      }
+      grid = (
+        <div>
+          <GridMaker columns={this.state.Col} rows={this.state.Row}>
+            {/* We need 'props.children' here */}
+            {cells}
+          </GridMaker>
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <h1>Pixel Art Maker</h1>
