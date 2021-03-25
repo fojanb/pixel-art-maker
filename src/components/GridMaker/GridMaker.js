@@ -13,6 +13,7 @@ const StyledGridContainer = styled.div`
   justify-content: center;
   align-item: center;
   margin-top: 20px;
+  cursor: cell;
 `;
 class GridMaker extends Component {
   state = {};
