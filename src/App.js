@@ -63,6 +63,7 @@ class App extends Component {
       for (let i = 0; i < this.state.Row * this.state.Col; i++) {
         cells.push(<Cell id={i} />);
       }
+      // console.log(cells);
       grid = (
         <div>
           <GridMaker columns={this.state.Col} rows={this.state.Row}>
