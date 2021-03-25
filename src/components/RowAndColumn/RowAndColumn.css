@@ -35,6 +35,10 @@
   cursor: pointer;
   background-color: #ffd9ff;
 }
+.row-column > h3{
+  color: #fdffb6;
+  -webkit-text-stroke: 0.72px #846ffc; 
+}
 #resetButton {
   border: none;
   background-color: #ffc6ff;
@@ -54,3 +58,9 @@
   grid-template-columns: repeat(8, 70px);
   grid-template-rows: repeat(8, 70px);
 } */
+span{
+  border: 3px solid #ffadad;
+  border-radius: 5px;
+  width: 20px;
+  background-color: #fdffb6;
+}
