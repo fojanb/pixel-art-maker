@@ -61,7 +61,7 @@ class App extends Component {
     let cells = [];
     if (this.state.showGrid) {
       for (let i = 0; i < this.state.Row*this.state.Col; i++) {
-        cells.push(<Cell id={i} />);
+        cells.push(<Cell id={i}/>);
       }
       // console.log(cells);
       grid = (
