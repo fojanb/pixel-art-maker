@@ -26,7 +26,6 @@ const StyledDiv = styled.div`
   }
 `;
 class Cell extends Component {
-  state = {};
   stop = () => {
     let cell = document.getElementById(this.props.id);
     cell.style.backgroundColor = "#caffbf";
