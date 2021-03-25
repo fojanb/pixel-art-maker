@@ -54,20 +54,20 @@ class App extends Component {
     let doesShow = this.state.showGrid;
     this.setState({ showGrid: !doesShow });
   };
-  
+
   //-----------------Event Handlers (end)-------------*
   render() {
     let grid = null;
     let cells = [];
     if (this.state.showGrid) {
       for (let i = 0; i < this.state.Row * this.state.Col; i++) {
-        cells.push(<Cell />);
+        cells.push(<Cell id={i} />);
       }
       grid = (
         <div>
           <GridMaker columns={this.state.Col} rows={this.state.Row}>
-          {/* We need 'props.children' here */}
-            {cells} 
+            {/* We need 'props.children' here */}
+            {cells}
           </GridMaker>
         </div>
       );
