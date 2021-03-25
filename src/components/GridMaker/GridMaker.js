@@ -20,8 +20,8 @@ class GridMaker extends Component {
   render() {
     return (
       <StyledGridContainer
-        numberOfColumns={this.props.columns}
-        numberOfRows={this.props.rows}
+        numberOfColumns={this.props.columns*5}
+        numberOfRows={this.props.rows*5}
       >
         {this.props.children}
       </StyledGridContainer>
