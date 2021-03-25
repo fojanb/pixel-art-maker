@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({ showGrid: !doesShow });
   };
   clearGrid = () =>{
-    this.cells = null;
+    console.log("grid cleared");
   }
   //-----------------Event Handlers (end)-------------*
   render() {
@@ -75,6 +75,7 @@ class App extends Component {
         </div>
       );
     }
+   
     
     return (
       <div className="App">
