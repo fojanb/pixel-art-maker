@@ -35,7 +35,8 @@ class Cell extends Component {
     return (
       <StyledDiv
         className="cell"
-        onClick={this.stop}
+        onDrag={this.stop}
+        draggable="true"
         id={this.props.id}
       ></StyledDiv>
     );
