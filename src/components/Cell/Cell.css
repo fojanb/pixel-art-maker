@@ -1,8 +1,9 @@
 .cell {
-  animation-name: hoverstyle;
-  animation-duration: 300ms;
+  /* animation-name: hoverstyle; */
+  animation-duration: 1ms;
   animation-play-state: paused;
   animation-fill-mode: both;
+  
 }
 .cell:active,
 .cell:focus,
@@ -10,7 +11,7 @@
   animation-play-state: running;
 }
 
-@keyframes hoverstyle {
+/* @keyframes hoverstyle {
     0% {
     background-color: #caffbf;
     border-color: #06d6a0;
@@ -19,5 +20,4 @@
       background-color: #06d6a0;
       border-color: #06d6a0;
     }
-  }
-  
+  } */
