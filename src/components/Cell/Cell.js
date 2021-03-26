@@ -8,7 +8,7 @@ const hoverStyle = keyframes`
     border-color: #06d6a0;
     }
     100% {
-      background-color#06d6a0: #06d6a0;
+      background-color: #06d6a0;
       border-color: #06d6a0;
     }`;
 // Grid's cell - Styling
