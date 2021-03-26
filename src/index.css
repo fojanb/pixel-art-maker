@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  padding-bottom:100px ;
+  padding-bottom: 100px;
   font-family: "Potta One", cursive;
-  /* background-color: #e5e8ff; */
   background-color: #cdcef5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,3 +9,13 @@ body {
   letter-spacing: 2px;
 }
 
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1 40px;
+  grid-template-rows: 1 20px;
+  font-size: 12px;
+  margin-top: 300px;
+  margin-bottom: -80px;
+}
